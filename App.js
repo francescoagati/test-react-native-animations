@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body } from 'native-base';
 
-import { Animated, View,Button } from 'react-native';
+import { Animated, View, Button } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
 
@@ -45,7 +45,7 @@ export default class ListThumbnailExample extends Component {
     super()
 
     this.state = {
-      show_animation:false
+      show_animation: false
     }
 
 
@@ -82,8 +82,8 @@ export default class ListThumbnailExample extends Component {
     let start = <Container key="start">
       <Header />
       <Content>
-          <Button title="Start" onPress={ () => this.setState({show_animation:true}) } >
-          </Button>
+        <Button title="Start" onPress={() => this.setState({ show_animation: true })} >
+        </Button>
       </Content>
     </Container>
 
@@ -94,9 +94,9 @@ export default class ListThumbnailExample extends Component {
           {elements}
         </List>
       </Content>
-    </Container>      
+    </Container>
 
-  
-    return  this.state.show_animation == false ? start:list;
+
+    return this.state.show_animation == false ? start : list;
   }
 }
